@@ -11,7 +11,7 @@
 	-->
 	<script type="text/javascript" src="calc.js"></script>
 	<link href="style.css" rel="stylesheet" type="text/css" media="all" />
-</head>
+  </head>
 <body>
 	<table width="100%" border="0" cellpadding="2" cellspacing="2">
       <tr>
@@ -25,7 +25,7 @@
 			<img src="blank.gif" class="flag flag-us" alt="English" />
 			English
 			</a>
-
+			
 			&nbsp; &nbsp; &nbsp; &nbsp;
 			<a href="#" rel="fr">
 			<img src="blank.gif" class="flag flag-gf" alt="French" />
@@ -34,15 +34,38 @@
 			</div>
 			<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0" class="box">
           <tr>
-            <td>Total KM to be Traveled</td>
+            <td>
+			
+			<span class="lang lang_en">
+			Total KM to be Traveled
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Nombre de kilomètres à parcourir
+			</span>
+			</td>
             <td><input type="number" id="km" name="km" value="" placeholder="KM" /></td>
           </tr>
           <tr>
-            <td>Total Days in Trip</td>
+            <td>
+			<span class="lang lang_en">
+				Total Days in Trip
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Nombre de jours de voyage
+			</span>
+			</td>
             <td><input type="number" id="days" name="days" value="" placeholder="days" /></td>
           </tr>
           <tr>
-            <td>Select Type of Car Being Rented</td>
+            <td>
+			<span class="lang lang_en">
+				Select Type of Car Being Rented
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Sélectionnez le type de véhicule à louer
+			</span>
+			
+			</td>
             <td><select name="type" id="type">
                 <option value="compact">Compact</option>
                 <option value="intermediate">Intermediate</option>
@@ -52,57 +75,144 @@
             </select></td>
           </tr>
           <tr>
-            <td>Cost of Fuel per litre</td>
-            <td>$
-            <input type="number" id="fuel_cost" name="fuel_cost" value="1.45" placeholder="Fuel" step="0.10" class="ch_input" />
+            <td>
+			<span class="lang lang_en">
+				Cost of Fuel per litre
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Coût du carburant par litre
+			</span>
 			</td>
+            <td>$ 
+            <input type="number" id="fuel_cost" name="fuel_cost" value="1.45" placeholder="Fuel" step="0.10" class="ch_input" />			</td>
           </tr>
           <tr>
-            <td>Rental Car Fuel Economy (L/100 KM)</td>
+            <td>
+			<span class="lang lang_en">
+				Rental Car Fuel Economy (L/100 KM)
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 économie de carburant pour véhicule loué (L/100 KM)
+			</span>
+			
+			</td>
             <td align="left"><strong id="car_km">...</strong></td>
           </tr>
           <tr>
-            <td>Sales Tax &amp; SC Surcharge</td>
             <td>
-				<input type="number" id="sales_tax" name="sales_tax" value="14.975" placeholder="Tax" step="0.01" class="ch_input" />
+			<span class="lang lang_en">
+				Sales Tax &amp; SC Surcharge
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Taxe de vente & supplément
+			</span>
+			
 			</td>
+            <td>
+				<input type="number" id="sales_tax" name="sales_tax" value="14.975" placeholder="Tax" step="0.01" class="ch_input" />			</td>
           </tr>
           <tr>
-            <td>Kilometer Reimbursement Rate</td>
+            <td>
+			<span class="lang lang_en">
+				Kilometer Reimbursement Rate
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Taux de remboursement par kilomètre
+			</span>
+			
+			</td>
             <td><input type="number" id="km_rate" name="km_rate" value="0.54" placeholder="KM Rate" step="0.01" class="ch_input" /></td>
           </tr>
         </table>
 		
 		<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0" class="box">
           <tr>
-            <th colspan="2">Calculated Results</th>
+            <th colspan="2">
+			<span class="lang lang_en">
+				Calculated Results
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Résultats calculés
+			</span>
+			
+			</th>
           </tr>
           <tr>
-            <td colspan="2" align="center"><strong>Personal Reimbursement Car Cost</strong></td>
+            <td colspan="2" align="center">
+			<span class="lang lang_en">
+				Personal Reimbursement Car Cost
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Remboursement personnel (frais du véhicule)
+			</span>
+			</td>
           </tr>
-          <td height="22">Total    Reimbursement Expense</td>
+          <td height="22">
+		  <span class="lang lang_en">
+			Total Reimbursement Expense
+		</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Remboursement total
+			</span>
+		  </td>
 		  <td align="right" class="result_box">
 		  <strong id="reimburse">$52.00 </strong></td>
           <tr height="18">
             <td colspan="2" height="18"><hr /></td>
           </tr>
           <tr height="18">
-            <td height="18" colspan="2" align="center"><strong>Rental Car Cost</strong></td>
+            <td height="18" colspan="2" align="center">
+			<span class="lang lang_en">
+				Rental Car Cost
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Coût de la location auto
+			</span>
+			
+			</td>
           </tr>
           <tr height="17">
-            <td height="17">Rental</td>
+            <td height="17">
+			<span class="lang lang_en">
+				Rental
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				Location
+			</span>
+			</td>
             <td align="right"><strong id="rental">$104.85</strong> </td>
           </tr>
           <tr height="17">
-            <td height="17">Additional fees</td>
+            <td height="17">
+			<span class="lang lang_en">
+				Additional fees
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Frais supplémentaires
+			</span>
+			</td>
             <td align="right"><strong id="fees">$12.12</strong> </td>
           </tr>
           <tr height="17">
-            <td height="17">Sales Tax</td>
+            <td height="17">
+			<span class="lang lang_en">
+				Sales Tax
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Taxes de vente
+			</span>
+			</td>
             <td align="right"><strong id="tax">$15.65</strong> </td>
           </tr>
           <tr height="21">
-            <td height="21">Refueling</td>
+            <td height="21">
+			<span class="lang lang_en">
+				Refueling
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				 Plein d’essence
+			</span>
+			</td>
             <td align="right"><strong id="refuel">$13.05</strong> </td>
           </tr>
           
@@ -112,7 +222,14 @@
 				<strong id="total">$145.67</strong></td>
           </tr>
           <tr>
-            <td>Cost per KM to Rent</td>
+            <td>
+			<span class="lang lang_en">
+				Cost per KM to Rent
+			</span>
+			<span class="lang lang_fr" style="display:none;">
+				Coût de location par km
+			</span>
+			</td>
             <td align="right"> <strong id="cost_km">$1.46</strong></td>
           </tr>
         </table>
