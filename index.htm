@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>Car Rental vs Mileage Reimbursement Calculator</title>
+	
+	<script type="text/javascript" src="//www.google.com/jsapi"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--
+	<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+	-->
+	<script type="text/javascript" src="calc.js"></script>
+	<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+	<table width="100%" border="0" cellpadding="2" cellspacing="2">
+      <tr>
+        <td align="center">
+		
+		<div class="calc_page">
+			<h1>Car Rental vs Mileage Reimbursement Calculator</h1>
+	
+			<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0" class="box">
+          <tr>
+            <td>Total KM to be Traveled</td>
+            <td><input type="number" id="km" name="km" value="" placeholder="KM" /></td>
+          </tr>
+          <tr>
+            <td>Total Days in Trip</td>
+            <td><input type="number" id="days" name="days" value="" placeholder="days" /></td>
+          </tr>
+          <tr>
+            <td>Select Type of Car Being Rented</td>
+            <td><select name="type" id="type">
+                <option value="compact">Compact</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="standard">Standard</option>
+                <option value="full_size">Full Size</option>
+                <option value="suv">SUV/Mini-van</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td>Cost of Fuel per litre</td>
+            <td>1.45 $</td>
+          </tr>
+          <tr>
+            <td>Rental Car Fuel Economy (L/100 KM)</td>
+            <td align="center"><strong id="car_km">...</strong></td>
+          </tr>
+          <tr>
+            <td>Sales Tax &amp; SC Surcharge</td>
+            <td>14.93%</td>
+          </tr>
+          <tr>
+            <td>Kilometer Reimbursement Rate</td>
+            <td>0.52 $</td>
+          </tr>
+        </table>
+		
+		<table width="95%" border="0" align="center" cellpadding="2" cellspacing="0" class="box">
+          <tr>
+            <th colspan="2">Calculated Results</th>
+          </tr>
+          <tr>
+            <td colspan="2">Personal Reimbursement Car Cost</td>
+          </tr>
+          <td height="22">Total    Reimbursement Expense</td>
+		  <td align="right" class="result_box">
+		  <strong id="reimburse">$52.00 </strong></td>
+          <tr height="18">
+            <td colspan="2" height="18">Rental Car Cost</td>
+          </tr>
+          <tr height="17">
+            <td height="17">Rental</td>
+            <td align="right"><strong id="rental">$104.85</strong> </td>
+          </tr>
+          <tr height="17">
+            <td height="17">Additional fees</td>
+            <td align="right"><strong id="fees">$12.12</strong> </td>
+          </tr>
+          <tr height="17">
+            <td height="17">Sales Tax</td>
+            <td align="right"><strong id="tax">$15.65</strong> </td>
+          </tr>
+          <tr height="21">
+            <td height="21">Refueling</td>
+            <td align="right"><strong id="refuel">$13.05</strong> </td>
+          </tr>
+          
+          <tr>
+            <td>Total</td>
+            <td align="right" class="result_box result_box2">
+				<strong id="total">$145.67</strong></td>
+          </tr>
+          <tr>
+            <td>Cost per KM to Rent</td>
+            <td align="right"> <strong id="cost_km">$1.46</strong></td>
+          </tr>
+        </table>
+		
+		</div>
+		
+			
+		</td>
+        <td width="400" rowspan="2" align="center">CHART! COMING SOON
+		<br />
+		<div id="visualization" style="width: 600px; height: 400px;"></div>
+		</td>
+      </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+#km{
+	width:60px;
+}
+#days{
+	width:60px;
+}
+
+
+.calc_page{
+	background-color : #EAF2F5;
+	width:500px;
+	margin: 10px auto auto auto;
+	padding-top:2px;
+	padding-bottom:2px;
+	
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.calc_page h1{
+	text-align:center;
+	color:white;
+	background-color : #0177C1;
+	width:95%;
+}
+.calc_page .box{
+	border:2px solid #cccccc;
+	background-color : #fff;
+	padding: 10px 5px 0px 5px;
+	margin-bottom:10px;
+}
+.calc_page .result_box{
+	font-size:20px;
+	border:1px solid #666666;
+	padding: 2px;
+	
+	background-color:#FFFFFF;
+	color:#0063AE;
+}
+.calc_page .result_box2{
+	background-color:#0063AE;
+	color:#FFFFFF;
+}
+.calc_page th{
+	background-color:#52B948;
+	color:#FFFFFF;
+}
+.calc_page td{
+	
+}
