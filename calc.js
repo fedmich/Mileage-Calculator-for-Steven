@@ -24,6 +24,11 @@ $(function() {
 	}).keyup( function (){
 		calculate();
 	});
+	$('.ch_input').change( function (){
+		calculate();
+	}).keyup( function (){
+		calculate();
+	});
 	$('#type').change( function (){
 		calculate();
 	});
@@ -36,6 +41,7 @@ function calculate(){
 	var days = $('#days').val();
 	
 	var ctype = $('#type').val();
+	var fuel_cost = $('#fuel_cost').val();
 	
 	var variance = 1;
 	switch(ctype){
@@ -70,7 +76,7 @@ function calculate(){
 	
 	var tax = rental * 14.925 / 100;
 	to_num ( $('#tax') , tax );
-	var refuel = ( days /100 * car_km ) * 1.45;
+	var refuel = ( days /100 * car_km ) * fuel_cost;
 	to_num ( $('#refuel') , refuel );
 	
 	to_num ( $('#total') , ( rental + fees + tax + refuel ) );
