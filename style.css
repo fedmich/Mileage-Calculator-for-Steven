@@ -10,6 +10,12 @@ body{
 #fuel_cost{
 	width:60px;
 }
+#sales_tax{
+	width:70px;
+}
+#km_rate{
+	width:70px;
+}
 
 
 .calc_page{
