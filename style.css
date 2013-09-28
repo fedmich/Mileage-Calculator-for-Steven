@@ -54,3 +54,22 @@ body{
 .calc_page td{
 	
 }
+
+.flag {
+	width: 16px;
+	height: 11px;
+	background:url(flags.png) no-repeat
+}
+
+.flag.flag-gf {background-position: -16px 0}
+.flag.flag-us {background-position: 0 -11px}
+
+
+.langs_change a{
+	text-decoration:none;
+	color:#0177C1;
+}
+.langs_change .active{
+	font-weight:bold;
+	color:#52B948;
+}
