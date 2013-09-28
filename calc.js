@@ -43,6 +43,7 @@ function calculate(){
 	var ctype = $('#type').val();
 	var fuel_cost = $('#fuel_cost').val();
 	var sales_tax = $('#sales_tax').val().replace(/\%/g,'');
+	var km_rate = $('#km_rate').val();
 	
 	var variance = 1;
 	switch(ctype){
@@ -67,7 +68,7 @@ function calculate(){
 	var result = km * days;
 	result = result * variance;
 	
-	to_num ( $('#reimburse') , km * 0.52);
+	to_num ( $('#reimburse') , km * km_rate);
 	
 	var rental = car_type_rates[ctype]['rate'] * days;
 	to_num ( $('#rental') , rental);
