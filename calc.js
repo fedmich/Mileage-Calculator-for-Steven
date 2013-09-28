@@ -36,6 +36,20 @@ $(function() {
 	calculate();
 });
 
+//Language switcher
+$(function() {
+	var o = $('.langs_change a');
+	o.click(function(){
+		o.not(this).removeClass('active');
+		$(this).addClass('active');
+		
+		var cc = this.rel;
+		
+		$('.lang').not('.lang_' + cc).hide();
+		$('.lang_' + cc).show();
+	});
+});
+
 function calculate(){
 	var km = $('#km').val();
 	var days = $('#days').val();
