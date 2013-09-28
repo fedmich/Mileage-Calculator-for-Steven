@@ -62,7 +62,7 @@ function calculate(){
 	}
 	
 	var car_km = car_type_rates[ctype]['km'];
-	to_num ( $('#car_km') , car_km );
+	to_num ( $('#car_km') , car_km , 0);
 	
 	var result = km * days;
 	result = result * variance;
@@ -78,7 +78,7 @@ function calculate(){
 	if(! sales_tax){
 		sales_tax = 14.975;
 	}
-
+	
 	var tax = rental * sales_tax / 100;
 	to_num ( $('#tax') , tax );
 	var refuel = ( days /100 * car_km ) * fuel_cost;
@@ -87,13 +87,16 @@ function calculate(){
 	to_num ( $('#total') , ( rental + fees + tax + refuel ) );
 }
 
-function to_num ( obj, v ){
+function to_num ( obj, v , decimals){
+	if(decimals!=0){
+		decimals = 2;
+	}
 	obj.html( '...' );
 	if(! v){
 		obj.html( '$0' );
 		return false;
 	}
-	obj.html( '$' + addCommas( v.toFixed(2) ) );
+	obj.html( '$' + addCommas( v.toFixed(decimals) ) );
 }
 function addCommas(nStr)
 {
