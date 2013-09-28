@@ -42,6 +42,7 @@ function calculate(){
 	
 	var ctype = $('#type').val();
 	var fuel_cost = $('#fuel_cost').val();
+	var sales_tax = $('#sales_tax').val().replace(/\%/g,'');
 	
 	var variance = 1;
 	switch(ctype){
@@ -74,7 +75,11 @@ function calculate(){
 	var fees = days * 4.04;
 	to_num ( $('#fees') , fees );
 	
-	var tax = rental * 14.925 / 100;
+	if(! sales_tax){
+		sales_tax = 14.975;
+	}
+
+	var tax = rental * sales_tax / 100;
 	to_num ( $('#tax') , tax );
 	var refuel = ( days /100 * car_km ) * fuel_cost;
 	to_num ( $('#refuel') , refuel );
