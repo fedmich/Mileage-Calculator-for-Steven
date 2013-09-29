@@ -47,7 +47,7 @@ $(function() {
 		
 		$('.lang').not('.lang_' + cc).hide().removeClass('active');
 		$('.lang_' + cc).show().addClass('active');
-
+		
 		calculate();
 	});
 });
@@ -79,7 +79,7 @@ function calculate(){
 	}
 	
 	var car_km = car_type_rates[ctype]['km'];
-	to_num ( $('#car_km') , car_km , 0);
+	to_num ( $('#car_km') , car_km , 0, '');
 	
 	var result = km * days;
 	result = result * variance;
@@ -104,16 +104,20 @@ function calculate(){
 	to_num ( $('#total') , ( rental + fees + tax + refuel ) );
 }
 
-function to_num ( obj, v , decimals){
+function to_num ( obj, v , decimals , curr ){
 	if(decimals!=0){
 		decimals = 2;
 	}
+	if( curr !=''){
+		curr = '$';
+	}
+	
 	obj.html( '...' );
 	if(! v){
 		obj.html( '$0' );
 		return false;
 	}
-	obj.html( '$' + addCommas( v.toFixed(decimals) ) );
+	obj.html( curr + addCommas( v.toFixed(decimals) ) );
 }
 function addCommas(nStr)
 {
