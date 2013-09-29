@@ -12,8 +12,8 @@ var sales_tax = 14.975;	//This is percentage, don't put % character here
 /* Options */
 
 $(function() {
-	$('#km').val( 100 );
-	$('#days').val( 3 );
+	$('#km').val( 250 );
+	$('#days').val( 1 );
 	$('#sales_tax').html( sales_tax + '%' );
 	
 	$('#km').change( function (){
