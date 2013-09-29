@@ -29,7 +29,7 @@ $(function() {
 	}).keyup( function (){
 		calculate();
 	});
-	$('#type').change( function (){
+	$('.car_type').change( function (){
 		calculate();
 	});
 	
@@ -45,8 +45,10 @@ $(function() {
 		
 		var cc = this.rel;
 		
-		$('.lang').not('.lang_' + cc).hide();
-		$('.lang_' + cc).show();
+		$('.lang').not('.lang_' + cc).hide().removeClass('active');
+		$('.lang_' + cc).show().addClass('active');
+
+		calculate();
 	});
 });
 
@@ -54,7 +56,7 @@ function calculate(){
 	var km = $('#km').val();
 	var days = $('#days').val();
 	
-	var ctype = $('#type').val();
+	var ctype = $('.active .car_type').val();
 	var fuel_cost = $('#fuel_cost').val();
 	var sales_tax = $('#sales_tax').val().replace(/\%/g,'');
 	var km_rate = $('#km_rate').val();
