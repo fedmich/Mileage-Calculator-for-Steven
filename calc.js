@@ -8,11 +8,13 @@ var car_type_rates = {
 , 'full_size' : { rate : 43.95 , km : 13 }
 , 'suv' : { rate : 69.95 , km : 16 }
 }
+var sales_tax = 14.975;	//This is percentage, don't put % character here
 /* Options */
 
 $(function() {
 	$('#km').val( 100 );
 	$('#days').val( 3 );
+	$('#sales_tax').html( sales_tax + '%' );
 	
 	$('#km').change( function (){
 		calculate();
@@ -58,8 +60,11 @@ function calculate(){
 	
 	var ctype = $('.active .car_type').val();
 	var fuel_cost = $('#fuel_cost').val();
-	var sales_tax = $('#sales_tax').val().replace(/\%/g,'');
 	var km_rate = $('#km_rate').val();
+	
+	//from Option above
+	var sales_tax_n = sales_tax;
+	sales_tax_n = sales_tax / 100;	//Percentage
 	
 	var variance = 1;
 	switch(ctype){
@@ -92,11 +97,8 @@ function calculate(){
 	var fees = days * 4.04;
 	to_num ( $('#fees') , fees );
 	
-	if(! sales_tax){
-		sales_tax = 14.975;
-	}
 	
-	var tax = rental * sales_tax / 100;
+	var tax = rental * sales_tax_n;
 	to_num ( $('#tax') , tax );
 	var refuel = ( days /100 * car_km ) * fuel_cost;
 	to_num ( $('#refuel') , refuel );
