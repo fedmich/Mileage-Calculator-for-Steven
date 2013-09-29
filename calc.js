@@ -100,7 +100,7 @@ function calculate(){
 	
 	var tax = rental * sales_tax_n;
 	to_num ( $('#tax') , tax );
-	var refuel = ( days /100 * car_km ) * fuel_cost;
+	var refuel = ( km /100 * car_km ) * fuel_cost;
 	to_num ( $('#refuel') , refuel );
 	
 	to_num ( $('#total') , ( rental + fees + tax + refuel ) );
