@@ -3,18 +3,23 @@ body{
 }
 #km{
 	width:60px;
+	text-align:right;
 }
 #days{
 	width:60px;
+	text-align:right;
 }
 #fuel_cost{
 	width:50px;
+	text-align:right;
 }
 #sales_tax{
 	width:70px;
+	text-align:right;
 }
 #km_rate{
 	width:60px;
+	text-align:right;
 }
 
 
@@ -28,6 +33,7 @@ body{
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
+	font-size:16px;
 }
 .calc_page h1{
 	text-align:center;
@@ -42,7 +48,7 @@ body{
 	margin-bottom:10px;
 }
 .calc_page .result_box{
-	font-size:20px;
+	font-size:16px;
 	border:1px solid #666666;
 	padding: 2px;
 	
